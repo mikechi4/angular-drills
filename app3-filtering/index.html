@@ -1,9 +1,35 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<!DOCTYPE html>
+<html ng-app='myApp'>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body ng-controller = 'mainCtrl'>
+		<input type="text" ng-model = 'searchName'>
+		<div ng-repeat = 'person in data | filter: searchName'>
+			<h3>{{person.name}}</h3>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</html>
+
+<!-- <html ng-app="myApp">
+	<body ng-controller="mainCtrl">
+
+		Find a person: <input ng-model="filterPredicate"/>
+		<div ng-repeat="person in people | filter: filterPredicate">
+			<h3>{{person.name}}</h3>
+			<p>Email: {{person.email}}</p>
+			<p>Date: {{person.dateEmployed}}</p>
+			<p>Phone Number: {{person.phone}}</p>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
 	</body>
-</html>
+</html> -->

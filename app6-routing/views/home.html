@@ -1,0 +1,16 @@
+<h1>HELLOO</h1>
+<h3>look at the Smurfs Click for more details</h3>
+{{message}}
+<div ng-repeat = "smurf in smurfs">
+  <h3>Name: {{smurf.name}}</h3>
+  <a ui-sref="details({id: smurf.id})"><h4><img src="{{smurf.img}}" alt="smurf_pic" /></h4></a>
+</div>
+
+
+<!-- <h1>{{title}}</h1>
+
+<div ng-repeat = 'pet in pets'>
+  <a ui-sref="details({id: pet.id})">
+    <img src="{{pet.image}}" class="pet-image" />
+  </a>
+</div> -->

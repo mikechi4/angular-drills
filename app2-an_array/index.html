@@ -1,12 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="arrayApp">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body ng-controller="mainCtrl">
+		{{message}}
+		<div ng-repeat = "data in getData">
+				{{data.name}}
+
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src='app.js'></script>
+	<script src='controller.js'></script>
+	<script src='service.js'></script>
+</html>
+
+
+<!--
+
+
 <html ng-app="arrayApp">
 	<head>
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
-	
+		<div class="">
+			<h2>Add new person to the list</h2>
+			<input type="text" ng-model="newName" placeholder="Enter info here">
+			<input type="text" ng-model="newNumber" placeholder="Enter info here">
+			<button type="button" ng-click='addNewPerson(newName, newNumber)'>Submit</button>
+		</div>
+		<div ng-repeat = "person in data">
+			<h3>Name: {{person.name}}</h3>
+			<p>Email: {{person.email}}</p>
+			<p>Start Date: {{person.dateEmployed}}</p>
+			<p>Phone Number: {{person.phone}}</p>
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
 	</body>
-</html>
+</html> -->
